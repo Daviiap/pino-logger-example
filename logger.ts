@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 import { OpenSearchClient } from "./OpenSearchClient";
 
 const openSearchClient = new OpenSearchClient(
-	"https://search-nuvidio-hml-uf6lqbr2g3ji2x32jzaeckf4ge.us-east-1.es.amazonaws.com"
+	"https://vpc-hml-nuvidio-xv4kocszcuxryrxiveppfymm7a.us-east-1.es.amazonaws.com"
 );
 
 export const pinoLogger = pino(
@@ -13,13 +13,13 @@ export const pinoLogger = pino(
 		write: async (msg: string) => {
 			try {
 				console.log(JSON.parse(msg));
-				openSearchClient.create({
+				await openSearchClient.create({
 					index: `api`,
 					id: v4(),
 					body: JSON.parse(msg),
 				});
 			} catch (e) {
-				console.log(e);
+				console.log("erro");
 			}
 		},
 	}

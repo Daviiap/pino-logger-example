@@ -17,7 +17,6 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@types/": "elastic/elasticsearch",
     "@types/aws-sdk": "^2.7.0",
     "@types/axios": "^0.14.0",
     "@types/dotenv": "^8.2.0",
