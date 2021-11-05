@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "sourceMap": false,
+    "baseUrl": "./",
+    "rootDir": "./",
+    "outDir": "./bin",
+    "target": "es6",
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "pretty": true,
+    "skipLibCheck": true
+  },
+}
