@@ -46,8 +46,6 @@ export const httpLogger = pinoHttp({
 		err: "error",
 	},
 	customProps: function (req: Request, res: Response) {
-		return {
-			body: req.body,
-		};
+		return {};
 	},
 });
