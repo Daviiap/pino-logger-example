@@ -3,9 +3,7 @@ import formatter from "@elastic/ecs-pino-format";
 import { v4 } from "uuid";
 import { OpenSearchClient } from "./OpenSearchClient";
 
-const openSearchClient = new OpenSearchClient(
-	"https://vpc-hml-nuvidio-xv4kocszcuxryrxiveppfymm7a.us-east-1.es.amazonaws.com"
-);
+const openSearchClient = new OpenSearchClient(process.env.OPENSEARCH_ENDPOINT);
 
 export const pinoLogger = pino(
 	{ ...formatter(), name: "pino" },
